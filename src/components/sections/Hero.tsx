@@ -695,29 +695,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div
-        className="hero-scroll-indicator"
-        style={{
-          position: "absolute",
-          bottom: "2rem",
-          left: "50%",
-          transform: "translateX(-50%)",
-          color: "#C8A96B",
-          opacity: 0,
-          animation: "bounce 2.2s infinite",
-          fontSize: "0.75rem",
-          letterSpacing: "0.2em",
-        }}
-      >
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem" }}>
-          <span style={{ fontSize: "0.6rem", opacity: 0.6 }}>SCROLL</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-            <path d="M12 5v14M19 12l-7 7-7-7" />
-          </svg>
-        </div>
-      </div>
-
       <style>{`
         @keyframes bounce {
           0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.6; }
