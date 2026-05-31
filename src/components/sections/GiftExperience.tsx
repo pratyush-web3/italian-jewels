@@ -45,9 +45,14 @@ export default function GiftExperience() {
         <div className="ge-left" style={{ opacity: 0 }}>
           <div style={{ position: "relative", overflow: "hidden" }}>
             <img
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
-              alt="Esperienza regalo di lusso"
-              style={{ width: "100%", height: "500px", objectFit: "cover", filter: "brightness(0.8)" }}
+            src="https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Confezione regalo di lusso"
+              style={{
+                width: "100%",
+                height: "500px",
+                objectFit: "cover",
+                filter: "brightness(0.8)"
+              }}
             />
             <div style={{
               position: "absolute",

@@ -44,7 +44,7 @@ const collections = [
       "L'oro bianco è il protagonista, con accenti di oro giallo che ricordano le luci dorate dei Navigli al tramonto. I diamanti taglio princess e i rubini cubici creano contrasti netti, quasi architettonici. Una collezione per chi sa che la vera modernità conosce le proprie radici.",
     ],
     images: [
-      "https://images.unsplash.com/photo-1573408301185-9519f94816b5?w=600&q=80",
+   "https://images.unsplash.com/photo-1611085583191-a3b181a88401?q=80&w=800&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=600&q=80",
       "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&q=80",
     ],
@@ -84,7 +84,7 @@ export default function Collezioni() {
   return (
     <div ref={ref} style={{ backgroundColor: "#0F0F10", paddingTop: "80px" }}>
       {/* Hero */}
-      <div style={{ position: "relative", height: "60vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+      <div style={{ position: "relative", height: "70vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
         <div style={{
           position: "absolute", inset: 0,
           backgroundImage: "url('https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=1400&q=80')",

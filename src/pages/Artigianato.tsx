@@ -32,7 +32,7 @@ const steps = [
       "La lavorazione dell'oro è un dialogo fisico, quasi intimo. Il metallo ha una memoria — ricorda ogni pressione, ogni temperatura, ogni gesto. I nostri orafi conoscono questo linguaggio da decenni. Sanno quando l'oro è pronto per essere piegato, quando ha bisogno di riposare, quando la fiamma deve avvicinarsi o allontanarsi.",
       "Utilizziamo tecniche che risalgono al Rinascimento: il bulino a mano, la filigrana traforata, il granulato in stile etrusco, la lavorazione al tornio. Accanto a queste, impieghiamo strumenti moderni di precisione per i controlli dimensionali — ma il tocco finale è sempre umano.",
     ],
-    img: "https://images.unsplash.com/photo-1573408301185-9519f94816b5?w=800&q=80",
+    img: "https://images.pexels.com/photos/265906/pexels-photo-265906.jpeg?auto=compress&cs=tinysrgb&w=1200"
   },
   {
     num: "04",
@@ -42,7 +42,7 @@ const steps = [
       "Prima che un gioiello lasci il nostro atelier, passa attraverso undici punti di controllo separati. Verifichiamo la struttura, la finitura, il posizionamento delle pietre, la tenuta degli incastoni, la luminosità della superficie e la congruenza tra il pezzo finale e il progetto originale.",
       "L'ultimo controllo è il più importante: il gioiello viene indossato da uno dei nostri maestri, osservato alla luce naturale e poi alla luce artificiale, fotografato da ogni angolazione. Solo quando siamo certi che nulla — assolutamente nulla — possa essere migliorato, il gioiello è pronto per essere consegnato.",
     ],
-    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    img: "https://images.pexels.com/photos/10983783/pexels-photo-10983783.jpeg?auto=compress&cs=tinysrgb&w=1200"
   },
 ];
 
@@ -64,10 +64,11 @@ export default function Artigianato() {
   return (
     <div ref={ref} style={{ backgroundColor: "#0F0F10", paddingTop: "80px" }}>
       {/* Hero */}
-      <div style={{ position: "relative", height: "60vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+      <div style={{ position: "relative", height: "70vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "url('https://images.unsplash.com/photo-1573408301185-9519f94816b5?w=1400&q=80')",
+backgroundImage:
+  "url('https://images.pexels.com/photos/265906/pexels-photo-265906.jpeg?auto=compress&cs=tinysrgb&w=1600')",
           backgroundSize: "cover", backgroundPosition: "center", filter: "brightness(0.3)"
         }} />
         <div style={{ position: "relative", zIndex: 1, textAlign: "center", padding: "0 2rem" }}>

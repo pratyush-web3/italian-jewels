@@ -34,7 +34,7 @@ export default function ArtisanSpotlight() {
         {/* Left — image */}
         <div className="as-left" style={{ opacity: 0, position: "relative" }}>
           <img
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+            src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=800"
             alt="Maestro Enzo Ferretti"
             style={{
               width: "100%",
@@ -77,7 +77,7 @@ export default function ArtisanSpotlight() {
             marginBottom: "0.5rem",
             letterSpacing: "0.02em",
           }}>
-            Enzo Ferretti
+           Giulia Moretti
           </h2>
           <div style={{
             fontFamily: "'Jost'",

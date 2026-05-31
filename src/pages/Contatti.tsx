@@ -42,9 +42,20 @@ export default function Contatti() {
 
   return (
     <div ref={ref} style={{ backgroundColor: "#0F0F10", paddingTop: "80px" }}>
-      {/* Hero */}
-      <div style={{ position: "relative", height: "50vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, backgroundImage: "url('https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=1400&q=80')", backgroundSize: "cover", backgroundPosition: "center", filter: "brightness(0.3)" }} />
+      {/* Hero */} 
+      <div style={{ position: "relative", height: "70vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+<div
+  style={{
+    position: "absolute",
+    inset: 0,
+    backgroundImage:
+      "url('https://images.pexels.com/photos/10983783/pexels-photo-10983783.jpeg?auto=compress&cs=tinysrgb&w=1600')",
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    filter: "brightness(0.85)"
+  }}
+/>
+
         <div style={{ position: "relative", zIndex: 1, textAlign: "center", padding: "0 2rem" }}>
           <div style={{ fontFamily: "'Jost'", fontSize: "0.62rem", letterSpacing: "0.4em", color: "#C8A96B", textTransform: "uppercase", marginBottom: "1.5rem" }}>Siamo a vostra disposizione</div>
           <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(3rem, 7vw, 5rem)", fontWeight: 300, color: "#F7F5F0", letterSpacing: "0.03em" }}>Contattaci</h1>

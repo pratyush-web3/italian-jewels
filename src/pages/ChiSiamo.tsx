@@ -12,9 +12,21 @@ const values = [
 ];
 
 const team = [
-  { name: "Enzo Ferretti", role: "Maestro Orafo — Terza Generazione", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80" },
-  { name: "Sofia Rossetti", role: "Direttrice Creativa", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80" },
-  { name: "Marco Gentile", role: "Responsabile Clienti", img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&q=80" },
+  {
+    name: "Giulia Moretti",
+    role: "Maestra Orafa Artigiana",
+    img: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    name: "Sofia Rossetti",
+    role: "Direttrice Creativa",
+    img: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    name: "Marco Gentile",
+    role: "Responsabile Clienti",
+    img: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
 ];
 
 const timeline = [
@@ -44,10 +56,11 @@ export default function ChiSiamo() {
   return (
     <div ref={ref} style={{ backgroundColor: "#0F0F10", paddingTop: "80px" }}>
       {/* Hero */}
-      <div style={{ position: "relative", height: "60vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+      <div style={{ position: "relative", height: "70vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "url('https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=1200&q=80')",
+backgroundImage:
+  "url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1600&q=80')",
           backgroundSize: "cover", backgroundPosition: "center", filter: "brightness(0.4)"
         }} />
         <div style={{ position: "relative", zIndex: 1, textAlign: "center", padding: "0 2rem" }}>
