@@ -41,7 +41,7 @@ export default function Contatti() {
   };
 
   return (
-    <div ref={ref} style={{ backgroundColor: "#0F0F10", paddingTop: "80px" }}>
+    <div ref={ref} id="contact-top" style={{ backgroundColor: "#0F0F10", paddingTop: "80px" }}>
       {/* Hero */} 
       <div style={{ position: "relative", height: "70vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
 <div
@@ -62,7 +62,7 @@ export default function Contatti() {
         </div>
       </div>
 
-      <section style={{ padding: "8rem 2rem", maxWidth: "1200px", margin: "0 auto" }}>
+      <section id="contact-form" style={{ padding: "8rem 2rem", maxWidth: "1200px", margin: "0 auto", scrollMarginTop: "120px" }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "6rem" }} className="contact-grid">
           {/* Form */}
           <div className="fade-up" style={{ opacity: 0 }}>

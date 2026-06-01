@@ -3,6 +3,20 @@ import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { Instagram, Facebook, Pinterest } from "@mui/icons-material";
 import { siteConfig } from "@/config/siteConfig";
 
+const collectionLinks = [
+  { label: "Collezione Venezia", href: "/collezioni#venezia" },
+  { label: "Collezione Firenze", href: "/collezioni#firenze" },
+  { label: "Collezione Milano", href: "/collezioni#milano" },
+  { label: "Collezione Roma", href: "/collezioni#roma" },
+];
+
+const categoryLinks = [
+  { label: "Collane", href: "/collane" },
+  { label: "Anelli", href: "/anelli" },
+  { label: "Bracciali", href: "/bracciali" },
+  { label: "Orecchini", href: "/orecchini" },
+];
+
 export default function Footer() {
   return (
     <footer style={{ backgroundColor: "#0A0A0B", borderTop: "1px solid rgba(200,169,107,0.2)", paddingTop: "5rem", paddingBottom: "3rem" }}>
@@ -82,8 +96,8 @@ export default function Footer() {
               textTransform: "uppercase",
               marginBottom: "1.5rem",
             }}>Collezioni</div>
-            {["Collezione Venezia", "Collezione Firenze", "Collezione Milano", "Collezione Roma"].map(c => (
-              <Link key={c} href="/collezioni">
+            {collectionLinks.map(link => (
+              <Link key={link.href} href={link.href}>
                 <div style={{
                   fontFamily: "'Jost', sans-serif",
                   fontSize: "0.82rem",
@@ -96,13 +110,13 @@ export default function Footer() {
                 onMouseEnter={e => { (e.currentTarget.style.color = "#C8A96B"); (e.currentTarget.style.opacity = "1"); }}
                 onMouseLeave={e => { (e.currentTarget.style.color = "#E7D8BC"); (e.currentTarget.style.opacity = "0.65"); }}
                 >
-                  {c}
+                  {link.label}
                 </div>
               </Link>
             ))}
             <div style={{ marginTop: "1rem", borderTop: "1px solid rgba(200,169,107,0.15)", paddingTop: "1rem" }}>
-              {["Collane", "Anelli", "Bracciali", "Orecchini"].map(c => (
-                <Link key={c} href="/collezioni">
+              {categoryLinks.map(link => (
+                <Link key={link.href} href={link.href}>
                   <div style={{
                     fontFamily: "'Jost', sans-serif",
                     fontSize: "0.82rem",
@@ -115,7 +129,7 @@ export default function Footer() {
                   onMouseEnter={e => { (e.currentTarget.style.color = "#C8A96B"); (e.currentTarget.style.opacity = "1"); }}
                   onMouseLeave={e => { (e.currentTarget.style.color = "#E7D8BC"); (e.currentTarget.style.opacity = "0.65"); }}
                   >
-                    {c}
+                    {link.label}
                   </div>
                 </Link>
               ))}

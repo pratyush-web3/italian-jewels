@@ -10,24 +10,28 @@ const collections = [
     year: "2024",
     desc: "Ispirata ai riflessi della laguna, oro e acquamarina in perfetta armonia.",
     img: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&q=80",
+    href: "/collezioni#venezia",
   },
   {
     name: "Collezione Firenze",
     year: "2023",
     desc: "L'eleganza rinascimentale reinterpretata in oro 18k e diamanti naturali.",
     img: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80",
+    href: "/collezioni#firenze",
   },
   {
     name: "Collezione Milano",
     year: "2024",
     desc: "Design contemporaneo con l'anima dell'artigianato tradizionale italiano.",
     img: "https://images.unsplash.com/photo-1633810542706-90e5ff7557be?w=600&q=80",
+    href: "/collezioni#milano",
   },
   {
     name: "Collezione Roma",
     year: "2023",
     desc: "Grandiosità imperiale tradotta in gioielli di rara bellezza e portamento.",
     img: "https://images.unsplash.com/photo-1589128777073-263566ae5e4d?w=600&q=80",
+    href: "/collezioni#roma",
   },
 ];
 
@@ -67,7 +71,7 @@ export default function FeaturedCollections() {
           gap: "1.5rem",
         }}>
           {collections.map((col) => (
-            <Link key={col.name} href="/collezioni">
+            <Link key={col.name} href={col.href}>
               <div
                 className="fc-card"
                 style={{

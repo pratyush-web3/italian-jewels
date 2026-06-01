@@ -6,10 +6,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const categories = [
-  { label: "Collane", icon: Circle },
-  { label: "Anelli", icon: Gem },
-  { label: "Bracciali", icon: Link2 },
-  { label: "Orecchini", icon: Star },
+  { label: "Collane", icon: Circle, href: "/collane" },
+  { label: "Anelli", icon: Gem, href: "/anelli" },
+  { label: "Bracciali", icon: Link2, href: "/bracciali" },
+  { label: "Orecchini", icon: Star, href: "/orecchini" },
 ];
 
 export default function CategoryShowcase() {
@@ -42,7 +42,7 @@ export default function CategoryShowcase() {
           {categories.map((cat, i) => {
             const Icon = cat.icon;
             return (
-              <Link key={cat.label} href="/collezioni">
+              <Link key={cat.label} href={cat.href}>
                 <div
                   className="cat-item"
                   style={{

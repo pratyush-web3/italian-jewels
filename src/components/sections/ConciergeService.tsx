@@ -89,7 +89,7 @@ export default function ConciergeService() {
         </div>
 
         <div style={{ textAlign: "center" }}>
-          <Link href="/contatti">
+          <Link href="/contatti#contact-top">
             <button
               style={{
                 fontFamily: "'Jost'",

@@ -114,7 +114,7 @@ export default function LimitedEdition() {
           ))}
         </div>
 
-        <Link href="/contatti">
+        <Link href="/contatti#contact-form">
           <button
             style={{
               fontFamily: "'Jost'",

@@ -5,6 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const collections = [
   {
+    id: "venezia",
     name: "Collezione Venezia",
     year: "2024",
     tagline: "Dove l'acqua incontra l'oro",
@@ -20,6 +21,7 @@ const collections = [
     ],
   },
   {
+    id: "firenze",
     name: "Collezione Firenze",
     year: "2023",
     tagline: "L'anima del Rinascimento",
@@ -35,6 +37,7 @@ const collections = [
     ],
   },
   {
+    id: "milano",
     name: "Collezione Milano",
     year: "2024",
     tagline: "Modernità con radici profonde",
@@ -50,6 +53,7 @@ const collections = [
     ],
   },
   {
+    id: "roma",
     name: "Collezione Roma",
     year: "2023",
     tagline: "La grandezza di Roma, in oro",
@@ -84,7 +88,7 @@ export default function Collezioni() {
   return (
     <div ref={ref} style={{ backgroundColor: "#0F0F10", paddingTop: "80px" }}>
       {/* Hero */}
-      <div style={{ position: "relative", height: "70vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+      <div id="top" style={{ position: "relative", height: "70vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", scrollMarginTop: "120px" }}>
         <div style={{
           position: "absolute", inset: 0,
           backgroundImage: "url('https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=1400&q=80')",
@@ -98,7 +102,7 @@ export default function Collezioni() {
 
       {/* Collections */}
       {collections.map((col, idx) => (
-        <section key={col.name} style={{ padding: "8rem 2rem", backgroundColor: idx % 2 === 0 ? "#0F0F10" : "#0A0A0B" }}>
+        <section key={col.name} id={col.id} style={{ padding: "8rem 2rem", backgroundColor: idx % 2 === 0 ? "#0F0F10" : "#0A0A0B", scrollMarginTop: "120px" }}>
           <div style={{ maxWidth: "1300px", margin: "0 auto" }}>
             <div className="fade-up" style={{ opacity: 0, marginBottom: "4rem", display: "flex", alignItems: "flex-end", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
               <div>
