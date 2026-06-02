@@ -32,6 +32,7 @@ export default function Navigation() {
   return (
     <>
       <nav
+        className="site-nav"
         style={{
           position: "fixed",
           top: 0,
@@ -123,12 +124,16 @@ export default function Navigation() {
         anchor="right"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
-        PaperProps={{
-          sx: {
-            backgroundColor: "#0F0F10",
-            width: "100%",
-            maxWidth: "360px",
-            borderLeft: "1px solid rgba(200,169,107,0.2)",
+        slotProps={{
+          paper: {
+            sx: {
+              backgroundColor: "#090909",
+              backgroundImage: "linear-gradient(180deg, rgba(200,169,107,0.04) 0%, rgba(9,9,9,0.98) 28%)",
+              color: "#F7F5F0",
+              width: "100%",
+              maxWidth: "360px",
+              borderLeft: "1px solid rgba(200,169,107,0.26)",
+            },
           },
         }}
       >
@@ -154,11 +159,11 @@ export default function Navigation() {
           <div style={{ flex: 1 }}>
             {navLinks.map((link, i) => (
               <Link key={link.href} href={link.href}>
-                <div style={{
+                <div className={`mobile-drawer-link ${location === link.href ? "active" : ""}`} style={{
                   fontFamily: "'Cormorant Garamond', serif",
                   fontSize: "2rem",
                   fontWeight: 300,
-                  color: location === link.href ? "#C8A96B" : "#F7F5F0",
+                  color: location === link.href ? "#C8A96B" : "#E7D8BC",
                   padding: "1rem 0",
                   borderBottom: "1px solid rgba(200,169,107,0.1)",
                   cursor: "pointer",
@@ -205,8 +210,38 @@ export default function Navigation() {
       </Drawer>
 
       <style>{`
+        .site-nav {
+          box-shadow: none;
+        }
         @media (max-width: 768px) {
+          .site-nav {
+            background-color: rgba(15, 15, 16, 0.94) !important;
+            border-bottom: 1px solid rgba(200, 169, 107, 0.22) !important;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+          }
+
           .hidden-mobile { display: none !important; }
+
+          .show-mobile {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 999px;
+            background: rgba(15, 15, 16, 0.9) !important;
+            border: 1px solid rgba(200, 169, 107, 0.28) !important;
+            color: #F7F5F0 !important;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+          }
+
+          .mobile-drawer-link {
+            color: #E7D8BC !important;
+          }
+
+          .mobile-drawer-link.active {
+            color: #C8A96B !important;
+          }
         }
         @media (min-width: 769px) {
           .show-mobile { display: none !important; }
