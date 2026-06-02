@@ -1,3 +1,4 @@
+import { type MouseEvent } from "react";
 import { Link } from "wouter";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { Instagram, Facebook, Pinterest } from "@mui/icons-material";
@@ -18,6 +19,32 @@ const categoryLinks = [
 ];
 
 export default function Footer() {
+  const normalizePath = (path: string) => path.replace(/\/+$/, "") || "/";
+
+  const handleFooterLinkClick = (event: MouseEvent<HTMLAnchorElement>, href: string) => {
+    const url = new URL(href, window.location.origin);
+    const currentPath = normalizePath(window.location.pathname);
+    const targetPath = normalizePath(url.pathname);
+
+    if (currentPath !== targetPath) {
+      return;
+    }
+
+    event.preventDefault();
+
+    if (!url.hash) {
+      window.scrollTo({ top: 0, behavior: "auto" });
+      return;
+    }
+
+    const targetId = url.hash.slice(1);
+    const target = document.getElementById(targetId);
+    if (target) {
+      history.replaceState(history.state, "", `${targetPath}${url.hash}`);
+      target.scrollIntoView({ behavior: "auto", block: "start" });
+    }
+  };
+
   return (
     <footer style={{ backgroundColor: "#0A0A0B", borderTop: "1px solid rgba(200,169,107,0.2)", paddingTop: "5rem", paddingBottom: "3rem" }}>
       <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 2rem" }}>
@@ -97,8 +124,13 @@ export default function Footer() {
               marginBottom: "1.5rem",
             }}>Collezioni</div>
             {collectionLinks.map(link => (
-              <Link key={link.href} href={link.href}>
-                <div style={{
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={(event) => handleFooterLinkClick(event, link.href)}
+                style={{
+                  display: "block",
+                  textDecoration: "none",
                   fontFamily: "'Jost', sans-serif",
                   fontSize: "0.82rem",
                   color: "#E7D8BC",
@@ -109,15 +141,16 @@ export default function Footer() {
                 }}
                 onMouseEnter={e => { (e.currentTarget.style.color = "#C8A96B"); (e.currentTarget.style.opacity = "1"); }}
                 onMouseLeave={e => { (e.currentTarget.style.color = "#E7D8BC"); (e.currentTarget.style.opacity = "0.65"); }}
-                >
-                  {link.label}
-                </div>
-              </Link>
+              >
+                {link.label}
+              </a>
             ))}
             <div style={{ marginTop: "1rem", borderTop: "1px solid rgba(200,169,107,0.15)", paddingTop: "1rem" }}>
               {categoryLinks.map(link => (
                 <Link key={link.href} href={link.href}>
-                  <div style={{
+                  <a style={{
+                    display: "block",
+                    textDecoration: "none",
                     fontFamily: "'Jost', sans-serif",
                     fontSize: "0.82rem",
                     color: "#E7D8BC",
@@ -126,11 +159,12 @@ export default function Footer() {
                     cursor: "pointer",
                     transition: "color 0.3s, opacity 0.3s",
                   }}
+                  onClick={(event) => handleFooterLinkClick(event, link.href)}
                   onMouseEnter={e => { (e.currentTarget.style.color = "#C8A96B"); (e.currentTarget.style.opacity = "1"); }}
                   onMouseLeave={e => { (e.currentTarget.style.color = "#E7D8BC"); (e.currentTarget.style.opacity = "0.65"); }}
                   >
                     {link.label}
-                  </div>
+                  </a>
                 </Link>
               ))}
             </div>
@@ -155,7 +189,9 @@ export default function Footer() {
               { label: "Termini di Utilizzo", href: "/termini" },
             ].map(item => (
               <Link key={item.href} href={item.href}>
-                <div style={{
+                <a style={{
+                  display: "block",
+                  textDecoration: "none",
                   fontFamily: "'Jost', sans-serif",
                   fontSize: "0.82rem",
                   color: "#E7D8BC",
@@ -164,11 +200,12 @@ export default function Footer() {
                   cursor: "pointer",
                   transition: "color 0.3s, opacity 0.3s",
                 }}
+                onClick={(event) => handleFooterLinkClick(event, item.href)}
                 onMouseEnter={e => { (e.currentTarget.style.color = "#C8A96B"); (e.currentTarget.style.opacity = "1"); }}
                 onMouseLeave={e => { (e.currentTarget.style.color = "#E7D8BC"); (e.currentTarget.style.opacity = "0.65"); }}
                 >
                   {item.label}
-                </div>
+                </a>
               </Link>
             ))}
           </div>
